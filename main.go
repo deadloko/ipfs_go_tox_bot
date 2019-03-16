@@ -66,12 +66,12 @@ func check_message_for_ipfs(message string) string {
 				log.Println(element.Hash, element.Name, element.Size, element.Type)
 				if element.Type == "Directory" {
 					message := fmt.Sprintf("Ipfs Gateway Link: https://ipfs.io/ipfs/%s \nFile name: /%s/ File type: %s, File size (bytes): %d\n", element.Hash, element.Name, "Directory", element.Size)
-					if len(message)+answer.Len() < 1372 {
+					if len(message)+answer.Len() < 1362 {
 						answer.WriteString(message)
 					}
 				} else {
 					message := fmt.Sprintf("Ipfs Gateway Link: https://ipfs.io/ipfs/%s \nFile name: /%s/ File type: %s, File size (bytes): %d\n", element.Hash, element.Name, get_file_type(element.Hash), element.Size)
-					if len(message)+answer.Len() < 1372 {
+					if len(message)+answer.Len() < 1362 {
 						answer.WriteString(message)
 					}
 				}
